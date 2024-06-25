@@ -1,0 +1,44 @@
+JAVASCRIPT NOTES
+- Javascirpt is a single-threaded, synchronous language
+
+Types:
+- String    - Number
+- Null      - Undefined
+- Object    - Symbol
+- Boolean
+
+Coercion: one type to another
+Scope: how long a method lives for
+
+Transpiler: 
+- takes newer features and turns it into earlier code
+- makes newer features compatible with previous versions
+
+First-class functions
+- can be assigned to variables/passed into functions
+
+Higher-order functions
+- map(), filter(), reduce() - passes in functions
+
+Immediately-invoked function expression
+EXAMPLE - we have an object with an inc and get function
+const counter = (function() {
+    let count = 0   // not accessible globally
+
+    return {
+        inc: function() { count = count + 1 }
+        get: function() { console.log(count) }
+    }
+})()
+
+counter.inc()
+counter.get()
+counter.get()
+
+
+EXECUTION STACK
+- functions added to a stack
+
+API's 
+- synchronous functions
+- run by the browser
